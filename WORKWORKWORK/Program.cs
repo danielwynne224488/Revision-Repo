@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Console.WriteLine("Programming Portfolio Score Calculator");
+Console.Write("What was the digital portfolio mark (out of 30)");
+int portfolioMark = int.Parse(Console.ReadLine();
+float portfolioPercentage = (portfolioMark / 30.0f) * 100;
+Console.Write("What was the Capstone Project mark (out of 100)");
+int capstoneMark = int.Parse(Console.ReadLine();
+float capstonePercentage = (capstoneMark / 100.0f) * 100;
+Console.Write("What was the Open Book Programming Exam mark (out of 20)");
+int examMark = int.Parse(Console.ReadLine();
+float examPercentage = (examMark / 20.0f) * 100;
