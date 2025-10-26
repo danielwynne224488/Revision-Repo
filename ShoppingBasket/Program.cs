@@ -19,8 +19,7 @@ do
         Console.WriteLine("Which item number do you want to replace?");
         int itemNumber = int.Parse(Console.ReadLine());
         Console.WriteLine("What is the new item?");
-        string newItem = Console.ReadLine();
-        basketContents[itemNumber - 1] = newItem;
+        basketContents[itemNumber - 1] = Console.ReadLine();
     }
 
     Console.WriteLine("Are you ready to check out? Answer y for yes");
