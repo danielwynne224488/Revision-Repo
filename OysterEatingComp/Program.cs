@@ -1,37 +1,61 @@
-﻿Console.WriteLine("Oyster Eating Competition");
-Console.WriteLine("How many competitors are there?");
-int competitorCount = int.Parse(Console.ReadLine());
+﻿using System.IO;
 
-string[] Names = new string[competitorCount];
-int[] EatCount = new int[competitorCount];
+Console.WriteLine("Oyster Eating Competition");
 
-for (int i = 0; i < competitorCount; i++)
+string filename = "results.txt";
+string[] Names;
+int[] EatCount;
+int competitorCount;
+
+Console.WriteLine("Do you wish to enter new results? y/n");
+if (Console.ReadLine().ToLower() == "y")
 {
-    Console.WriteLine($"Enter the name of competitor #{i + 1}:");
-    Names[i] = Console.ReadLine();
-    Console.WriteLine($"How many oysters did {Names[i]} eat?");
-    EatCount[i] = int.Parse(Console.ReadLine());
-}
 
-for (int i = 0; i < Names.Length-1; i++)
-{
-    for (int j = i + 1; j < Names.Length; j++)
+    Console.WriteLine("How many competitors are there?");
+    int competitorCount = int.Parse(Console.ReadLine());
+
+    string[] Names = new string[competitorCount];
+    int[] EatCount = new int[competitorCount];
+
+    for (int i = 0; i < competitorCount; i++)
     {
-        if (EatCount[i] < EatCount[j])
+        Console.WriteLine($"Enter the name of competitor #{i + 1}:");
+        Names[i] = Console.ReadLine();
+        Console.WriteLine($"How many oysters did {Names[i]} eat?");
+        EatCount[i] = int.Parse(Console.ReadLine());
+    }
+
+    for (int i = 0; i < Names.Length - 1; i++)
+    {
+        for (int j = i + 1; j < Names.Length; j++)
         {
-            // Swap EatCount
-            int tempEat = EatCount[i];
-            EatCount[i] = EatCount[j];
-            EatCount[j] = tempEat;
-            // Swap Names
-            string tempName = Names[i];
-            Names[i] = Names[j];
-            Names[j] = tempName;
+            if (EatCount[i] < EatCount[j])
+            {
+                // Swap EatCount
+                int tempEat = EatCount[i];
+                EatCount[i] = EatCount[j];
+                EatCount[j] = tempEat;
+                // Swap Names
+                string tempName = Names[i];
+                Names[i] = Names[j];
+                Names[j] = tempName;
+            }
         }
     }
+
+    using (StreamWriter writer = new StreamWriter(filename))
+    {
+        for (int i = 0; i < competitorCount; i++)
+        {
+            writer.WriteLine($"{Names[i]},{EatCount[i]}");
+        }
+    }
+
 }
-
-
+else
+{
+    Console.WriteLine("Displaying previous results...");
+}
 
 for (int i = 0; i < competitorCount; i++)
 {
