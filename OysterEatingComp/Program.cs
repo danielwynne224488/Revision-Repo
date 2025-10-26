@@ -48,6 +48,9 @@ if (Console.ReadLine().ToLower() == "y")
         for (int i = 0; i < competitorCount; i++)
         {
             writer.WriteLine($"{Names[i]},{EatCount[i]}");
+
+
+
         }
     }
 
@@ -57,5 +60,13 @@ else
     Console.WriteLine("Displaying previous results...");
 }
 
+using (StreamReader reader = new StreamReader(filename))
+{
+    string line;
+    while ((line = reader.ReadLine()) != null)
+    {
+        Console.WriteLine(line);  // Just displays it for now
+    }
+}
 
 Console.ReadLine();
