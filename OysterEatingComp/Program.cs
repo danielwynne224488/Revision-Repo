@@ -2,7 +2,7 @@
 
 Console.WriteLine("Oyster Eating Competition");
 
-string filename = "results.txt";
+string filename = "../../../results.txt";
 string[] Names;
 int[] EatCount;
 int competitorCount;
@@ -12,10 +12,10 @@ if (Console.ReadLine().ToLower() == "y")
 {
 
     Console.WriteLine("How many competitors are there?");
-    int competitorCount = int.Parse(Console.ReadLine());
+    competitorCount = int.Parse(Console.ReadLine());
 
-    string[] Names = new string[competitorCount];
-    int[] EatCount = new int[competitorCount];
+    Names = new string[competitorCount];
+    EatCount = new int[competitorCount];
 
     for (int i = 0; i < competitorCount; i++)
     {
@@ -57,9 +57,5 @@ else
     Console.WriteLine("Displaying previous results...");
 }
 
-for (int i = 0; i < competitorCount; i++)
-{
-    Console.WriteLine($"{Names[i]} ate {EatCount[i]} oysters.");
-}
 
 Console.ReadLine();
