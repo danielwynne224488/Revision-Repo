@@ -42,7 +42,7 @@ float examPercentage = (examMark / 20.0f) * 100;
 
 float finalScore = (portfolioPercentage * 0.5f) + (capstonePercentage * 0.25f) + (examPercentage * 0.25f);
 
-if capstonePercentage < 40 AND finalscore > 34
+if (capstonePercentage < 40 && finalScore > 34)
 {
     finalScore = 34;
 }
