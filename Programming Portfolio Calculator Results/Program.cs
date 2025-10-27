@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System;
 
-
+string inputfilelocation = "../../../..";
 
 public class studentRecord
 {
@@ -20,4 +20,6 @@ public class studentRecord
 
 Console.WriteLine("Please select a file to load");
 Console.WriteLine("");
+
+
 string ChosenFile = Console.ReadLine();
