@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System;
 
-string inputfilelocation = "../../../..";
+string inputfilelocation = "../../../../.mark"
 
 public class studentRecord
 {
