@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Console.WriteLine("How many items do you need to buy?");
+
+int numberOfItems = int.Parse(Console.ReadLine());
+
+string[] shoppingList = new string[numberOfItems];
