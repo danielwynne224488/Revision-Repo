@@ -93,6 +93,19 @@ void NumberOfVowelsInString()
  
 void PigLatin()
 {
+    Console.WriteLine("Please enter a sentence to convert to Pig Latin:");
+    string input = Console.ReadLine();
+    string[] words = input.Split(' ');
+    string pigLatinSentence = "";
+    foreach (string word in words)
+    {
+        if (word.Length > 0)
+        {
+            string pigLatinWord = word.Substring(1) + word[0] + "ay";
+            pigLatinSentence += pigLatinWord + " ";
+        }
+    }
+    Console.WriteLine("Pig Latin: " + pigLatinSentence.Trim());
 
 }
  
