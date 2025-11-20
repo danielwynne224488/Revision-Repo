@@ -19,6 +19,7 @@ Console.WriteLine(Mark.name);
 Console.WriteLine(Mark.age);
 Console.WriteLine(Mark.gender);
 
+Mark
 
 class Person
 {
@@ -26,3 +27,5 @@ class Person
     public int age;
     public string gender;
 }
+
+mymethod();
